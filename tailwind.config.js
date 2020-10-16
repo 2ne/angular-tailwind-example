@@ -1,8 +1,13 @@
 module.exports = {
-  purge: [],
-  theme: {
-    extend: {},
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+    defaultLineHeights: true,
+    standardFontWeights: true,
   },
-  variants: {},
-  plugins: [],
+  theme: {
+    fontFamily: {
+      sans: ['"Inter"', 'sans-serif']
+    },
+  },
 }

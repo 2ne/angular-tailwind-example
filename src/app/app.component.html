@@ -1,9 +1,180 @@
-<div class="w-screen h-screen page-container grid place-items-center">
-  <div class="greeting-container grid place-items-center">
-    <img class="max-w-xs rounded-full border-solid border-8 border-white" src="https://avatars1.githubusercontent.com/u/24988127?s=460&u=eda1b193658e000ea37580cc0ff97b14a5dafa0c&v=4" alt="Sunset in the mountains">
-    <div class="text-center text-white">
-      <p class="font-bold text-5xl m-4">Hi, I am Indrajeet 👋</p>
-      <p class="uppercase text-2xl mt-16">I <span class="animate-pulse">❤</span> Tailwind CSS</p>
-    </div>
+<header class="p-4 shadow-md flex items-center h-16 bg-white inset-0 fixed z-50">
+  <div class="flex items-center">
+    <button type="button" class="mr-3 flex items-center text-gray-600 p-1 border-2 border-transparent text-gray-400 rounded-full transition duration-300 hover:bg-gray-200 focus:outline-none">
+      <i class="ci-hamburger text-2xl"></i>
+    </button>
+    <div class="font-medium text-lg truncate">Fleet View</div>
+  </div>
+</header>
+<div class="z-40 absolute inset-0">
+  <div class="marker marker--1 bg-red-600 rounded-full h-10 w-10 flex items-center justify-center text-white font-bold border-2 border-white transition duration-300 hover:bg-red-500">
+    <div class="-mt-px">3</div>
+  </div>
+  <div class="marker marker--2 bg-blue-600 rounded-full h-10 w-10 flex items-center justify-center text-white font-bold border-2 border-white transition duration-300 hover:bg-blue-500">
+    <div class="-mt-px">25</div>
+  </div>
+  <div class="vehicle__marker whitespace-no-wrap justify-center px-2 inline-flex text-xs font-bold rounded-full bg-blue-600 text-white border-2 border-white transition duration-300 hover:bg-blue-500">
+    <div class="border border-transparent">GB51 LTY</div>
   </div>
 </div>
+<aside class="border-l border-gray-200 bg-white top-0 bottom-0 right-0 fixed z-50">
+  <div class="flex items-center h-16 py-3 px-4">
+    <div class="relative flex-grow">
+      <form>
+        <input type="search" class="transition duration-300 py-2 pr-8 pl-10 block w-full appearance-none leading-normal border border-transparent rounded-md rounded-r-none focus:outline-none text-left focus:bg-white focus:border-gray-300 bg-gray-200" placeholder="Search Vehicles...">
+        <div class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center">
+          <i class="ci-search pointer-events-none text-gray-600 text-xl"></i>
+        </div>
+        <button type="reset" class="opacity-0 invisible absolute inset-y-0 right-0 my-auto mr-2 text-center flex items-center text-gray-600 hover:bg-gray-200 rounded-full focus:outline-none border-2 border-transparent h-6 w-6 transition duration-300">
+          <i class="ci-close_small text-xl m-0"></i>
+        </button>
+      </form>
+    </div>
+    <span class="inline-block rounded-md shadow-sm -ml-1px">
+        <button type="button" class="relative w-full rounded-md border border-gray-300 rounded-l-none bg-white py-2 pr-4 pl-4 focus:outline-none transition font-medium flex items-center hover:bg-gray-100 transition duration-300">
+          <i class="ci-slider_01 pointer-events-none text-gray-600 text-lg mr-2"></i>
+          <span class="truncate">Filters</span>
+        </button>
+      </span>
+  </div>
+  <table class="w-full leading-normal table-fixed">
+    <thead>
+    <tr>
+      <th class="py-2 px-4 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600" style="width: 115px;">
+        Status
+      </th>
+      <th class="py-2 px-4 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600">
+        Vehicle
+      </th>
+      <th class="py-2 px-4 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600">
+        Location
+      </th>
+      <th class="py-2 px-4 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600" style="width: 115px;">
+        Distance
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <span class="animate-pulse whitespace-no-wrap w-full justify-center px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-700" style="max-width: 72px;">
+          55 mph
+        </span>
+      </td>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <a href="#" class="text-gray-900 font-medium hover:underline truncate">
+          GB51 LTY
+        </a>
+        <p class="text-gray-600 truncate">Ford Transit</p>
+      </td>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <a href="#" class="text-gray-900 font-medium hover:underline truncate">
+          Sheffield
+        </a>
+        <p class="text-gray-600 truncate">2m ago</p>
+      </td>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <p class="text-gray-600 truncate">
+          45 miles
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <span class="whitespace-no-wrap w-full justify-center px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-700" style="max-width: 72px;">
+          Parked
+        </span>
+      </td>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <a href="#" class="text-gray-900 font-medium hover:underline truncate">
+          LB44 PTO
+        </a>
+        <p class="text-gray-600 truncate">Ford Focus 1.6</p>
+      </td>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <a href="#" class="text-gray-900 font-medium hover:underline truncate">
+          Derby
+        </a>
+        <p class="text-gray-600 truncate">25s ago</p>
+      </td>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <p class="text-gray-600 truncate">
+          25 miles
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <span class="whitespace-no-wrap w-full justify-center px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-700" style="max-width: 72px;">
+          Parked
+        </span>
+      </td>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <a href="#" class="text-gray-900 font-medium hover:underline truncate">
+          YP32 FYU
+        </a>
+        <p class="text-gray-600 truncate">VW Transporter</p>
+      </td>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <a href="#" class="text-gray-900 font-medium hover:underline truncate">
+          Chester
+        </a>
+        <p class="text-gray-600 truncate">2m ago</p>
+      </td>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <p class="text-gray-600 truncate">
+          62 miles
+        </p>
+      </td>
+    </tr>        <tr>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <span class="whitespace-no-wrap w-full justify-center px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-700" style="max-width: 72px;">
+          Parked
+        </span>
+      </td>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <a href="#" class="text-gray-900 font-medium hover:underline truncate">
+          GP35 NYO
+        </a>
+        <p class="text-gray-600 truncate">Nissan Micra 1.0</p>
+      </td>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <a href="#" class="text-gray-900 font-medium hover:underline truncate">
+          Northampton
+        </a>
+        <p class="text-gray-600 truncate">5s ago</p>
+      </td>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <div class="flex items-center" title="Late return">
+          <i class="ci-warning text-lg text-red-600 mr-1 -mt-px"></i>
+          <p class="text-red-600 truncate">42 miles</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <span class="whitespace-no-wrap w-full justify-center px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-700" style="max-width: 72px;">
+          Error
+        </span>
+      </td>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <a href="#" class="text-gray-900 font-medium hover:underline truncate">
+          TL33 RTF
+        </a>
+        <p class="text-gray-600 truncate">Tesla Roadster</p>
+      </td>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <a href="#" class="text-gray-900 font-medium hover:underline truncate">
+          Nottingham
+        </a>
+        <p class="text-gray-600 truncate">14 Oct</p>
+      </td>
+      <td class="p-4 border-b border-gray-200 bg-white text-sm">
+        <p class="text-gray-600 truncate">
+          16 miles
+        </p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</aside>
